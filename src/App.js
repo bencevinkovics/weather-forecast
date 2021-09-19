@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import RightContainer from './components/RightConatainer';
+import RightContainer from './components/RightContainer';
 import axios from 'axios';
 import SearchBar from "./components/SearchBar";
 import BoxMain from "./components/BoxMain";
