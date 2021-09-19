@@ -11,8 +11,8 @@ function App() {
 
   const getWeather = async (text) => {
     const ApiKey = process.env.REACT_APP_API_KEY
-    const urlCurrent = `http://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=${ApiKey}`;
-    const urlForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${text}&units=metric&appid=${ApiKey}`;
+    const urlCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=${ApiKey}`;
+    const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${text}&units=metric&appid=${ApiKey}`;
     await axios.get(urlCurrent)
       .then((response) => {
         setWeather(response.data);
