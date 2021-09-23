@@ -44,22 +44,22 @@ function App() {
   };
 
   return (
-    <div className='backgroundStyle'>
+    <>
       {((typeof weather.main != "undefined") && (forecast.cod === "200")) ?
         (
           <div className='mainStyle'>
             <LeftContainer weather={weather} getWeather={getWeather} screenSize={screenSize} />
             <RightContainer forecast={forecast} screenSize={screenSize} />
-          </div >
+          </div>
         ) :
         (
           <div className='blankStyle'>
             <p className='welcomeTextStyle'>Hello, please search for your city.</p>
-            <div className={searchContainerClass}><SearchBar getWeather={getWeather} /></div>
+            <div className={searchContainerClass}><SearchBar getWeather={getWeather} screenSize={screenSize} /></div>
           </div>
         )
       }
-    </div >
+    </>
   )
 };
 

@@ -5,7 +5,6 @@
     width: 40%;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
 }
 
 .rightContainerStylemd {
@@ -15,7 +14,6 @@
     width: 80%;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
 }
 
 .rightContainerStylesm {
@@ -25,7 +23,6 @@
     width: 90%;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
 }
 
 /*BoxRight*/
@@ -34,7 +31,7 @@
     width: 98%;
     height: 15vh;
     margin-top: 2.5vh;
-    margin-bottom: 2.5vh;
+    margin-bottom: 1vh;
     margin-left: 1.5vw;
     margin-right: 1.5vw;
     background: rgba(255, 255, 255, 0.8);
@@ -79,13 +76,23 @@
     font-size: 5vh;
 }
 
-.smallTextStylexs {
-    font-size: 1vh;
+.smallForecastStylelg {
+    font-size: 3vh;
+}
+
+.smallForecastStylemd {
+    font-size: 2vh;
+}
+
+.smallForecastStylesm {
+    font-size: 2vh;
+}
+
+.smallForecastStylexs {
+    font-size: 2vh;
 }
 
 .imgStyle {
     height: 90%;
     width: auto;
 };
-
-/*MEDIA QUUERY 1024-től a jobb oldal miatt*/

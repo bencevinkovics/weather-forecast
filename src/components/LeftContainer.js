@@ -8,7 +8,7 @@ const LeftContainer = ({ weather, getWeather, screenSize }) => {
 
     return (
         <div className={leftContainerClass}>
-            <SearchBar getWeather={getWeather} />
+            <SearchBar getWeather={getWeather} screenSize={screenSize} />
             <BoxMain
                 name={weather.name}
                 temp={weather.main.temp}

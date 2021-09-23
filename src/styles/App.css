@@ -1,16 +1,17 @@
-.backgroundStyle {
+html, body {
+  margin: 0;
+  min-height: 100%;
 }
 
 .mainStyle {
-  min-height: 100vh;
-  min-width: 100vw;
   background: linear-gradient( #419AF2, #4FA9F2, #5EB9F1, #6CC8F1);
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  border: 1px solid red;
+  padding:0;
 }
 
 .placeholderStyle {
@@ -25,11 +26,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-}
-
-.rightContainerStyle {
-  height: 90%;
-  min-width: 40%;
 }
 
 .blankStyle {

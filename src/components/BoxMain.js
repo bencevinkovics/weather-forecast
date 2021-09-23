@@ -1,15 +1,13 @@
 import { findByLabelText } from "@testing-library/dom";
 import moment from "moment";
-import rain from "../assets/weatherIcons/rain.png";
 import "../styles/LeftContainer.css"
 
 const BoxMain = ({ name, temp, description, id, sunrise, sunset, timezone, screenSize }) => {
     let img = "";
     const timeDiff = parseInt(timezone / 3600)
-    console.log(moment.utc());
     const iconClass = `iconStyle${screenSize}`;
-    const smallTextClass = `smallTextStyle${screenSize}`;
-    const largeTextClass = `largeTextStyle${screenSize}`;
+    const smallMainTextClass = `smallMainTextStyle${screenSize}`;
+    const largeMainTextClass = `largeMainTextStyle${screenSize}`;
 
     if (/801/.test(id)) {
         (moment((moment.utc())).add((parseInt(timeDiff / 3600)), 'hours').isBetween(moment.unix(sunrise), moment.unix(sunset))) ?
@@ -39,12 +37,12 @@ const BoxMain = ({ name, temp, description, id, sunrise, sunset, timezone, scree
     return (
         <div className='boxMainLeftStyle'>
             <div className='frameStyle'>
-                <img className={iconClass} src={/*../assets/weatherIcons/${img}`*/rain} alt="Couldn't load." />
+                <img className={iconClass} src={`weatherIcons/${img}`} alt="Couldn't load." />
             </div>
             <div className='infoStyle'>
-                <div className={smallTextClass}>{name}</div>
-                <div className={largeTextClass}>{Math.round(temp)}°C</div>
-                <div className={smallTextClass}>{description}</div>
+                <div className={smallMainTextClass}>{name}</div>
+                <div className={largeMainTextClass}>{Math.round(temp)}°C</div>
+                <div className={smallMainTextClass}>{description}</div>
             </div>
         </div >
     )

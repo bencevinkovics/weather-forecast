@@ -1,13 +1,11 @@
 import moment from "moment";
-import rain from '../assets/weatherIcons/rain.png'
 import "../styles/RightContainer.css"
 
-const BoxRight = (props) => {
+const BoxRight = ({ key, date, temp, id, description, screenSize }) => {
     let img = '';
-    const id = props.id;
-    const day = moment(props.date).format('ddd');
-    const date = moment(props.date).format('DD/MMM');
-    const smallTextClass = `smallTextStyle${props.screensize}`;
+    const day = moment(date).format('ddd');
+    const dateFormed = moment(date).format('DD/MMM');
+    const smallForecastClass = `smallForecastStyle${screenSize}`;
 
     if (/801/.test(id)) {
         img = "few_clouds_d.png"
@@ -36,14 +34,14 @@ const BoxRight = (props) => {
         <div className='boxRightStyle'>
             <div className='dateStyle'>
                 <div className='forecastTextStyle'>{day}</div>
-                <div className={smallTextClass}>{date}</div>
+                <div className={smallForecastClass}>{dateFormed}</div>
             </div>
             <div className='forecastDataStyle'>
                 <div className='forecastInfoStyle'>
-                    <div className='forecastTextStyle'> {Math.round(props.temp)}°C </div>
-                    <div className={smallTextClass}> {props.description} </div>
+                    <div className='forecastTextStyle'> {Math.round(temp)}°C </div>
+                    <div className={smallForecastClass}> {description} </div>
                 </div>
-                <img className='imgStyle' src={/*`weatherIcons/${img}`*/rain} alt="Couldn't load." />
+                <img className='imgStyle' src={`weatherIcons/${img}`} alt="Couldn't load." />
             </div>
 
         </div >

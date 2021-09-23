@@ -5,11 +5,10 @@
     padding-right: 1.5vw;*/
     display: flex;
     flex-direction: column;
-    width: 40%;
+    max-width: 40%;
     max-height: 90%;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
     margin:0;
 }
 
@@ -20,7 +19,6 @@
     height: 90%;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
     margin:0;
 }
 
@@ -31,7 +29,6 @@
     height: 90%;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
     margin:0;
 }
 
@@ -43,7 +40,6 @@
     height: 90%;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
     margin:0;
 }
 
@@ -68,49 +64,48 @@
 .infoStyle {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 50%;
     padding: 2vw;
     /*padding-left: 20px; */
 }
 
-.smallTextStylelg {
-    font-size: 5vh; 
+.smallMainTextStylelg {
+    font-size: 4vh; 
 }
 
-.largeTextStylelg {
+.largeMainTextStylelg {
     font-size: 10vh;
     font-weight: 500;
-    border: 1px solid green;
 }
 
-.smallTextStylemd {
-    font-size: 3.5vh; 
+.smallMainTextStylemd {
+    font-size: 4vh;
 }
 
-.largeTextStylemd {
+.largeMainTextStylemd {
     font-size: 9vh;
     font-weight: 500;
 }
 
-.smallTextStylesm {
+.smallMainTextStylesm {
     font-weight: 500;
     font-size: 5vw; 
 }
 
-.largeTextStylesm {
+.largeMainTextStylesm {
     font-size: 8vh;
     font-weight: 500;
 }
 
-.smallTextStylexs {
+.smallMainTextStylexs {
     
     font-weight: 500;
     font-size: 5vw;
 }
 
-.largeTextStylexs {
+.largeMainTextStylexs {
     font-size: 6vh;
     font-weight: 500;
 }
@@ -122,7 +117,7 @@
 }
 
 .iconStylemd {
-    max-width: 150%;
+    max-width: 110%;
     height: auto;
 }
 
@@ -142,7 +137,6 @@
     align-items: center;
     max-width: 50%;
     max-height: 100%;
-    border: 1px solid red;
 }
 
 
@@ -238,18 +232,63 @@
 
 /*Searchbar*/
 
-.inputStyle{
+.inputStylelg{
 size: 10;
 height: 2vh;
 border: 0;
 border-radius: 15px;
 cursor: pointer;
 padding-left: 15px;
+font-size: 2vh;
 }
 
-.inputStyle:focus{
+.inputStylelg:focus{
     outline: none;
 }
+
+.inputStylemd{
+    size: 10;
+    height: 2vh;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    padding-left: 15px;
+    font-size: 2vh;
+    }
+    
+.inputStylemd:focus{
+    outline: none;
+}
+
+.inputStylesm{
+    size: 10;
+    height: 2vh;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    padding-left: 15px;
+    font-size: 3vw;
+}
+
+.inputStylesm:focus{
+    outline: none;
+}
+
+.inputStylexs{
+    size: 10;
+    height: 2vh;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    padding-left: 15px;
+    font-size: 4vw;
+}
+
+.inputStylexs:focus{
+    outline: none;
+}
+
+
 
 .formStyle {
     width: 98%;
@@ -280,6 +319,3 @@ padding-left: 15px;
     background: #b0b0b0 ;
     color: white;
 }
-
-
-/*MEDIA QUERY <700 px a betuk miatt*/
