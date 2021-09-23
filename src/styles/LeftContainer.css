@@ -233,7 +233,7 @@
 /*Searchbar*/
 
 .inputStylelg{
-size: 10;
+width: 70%;
 height: 2vh;
 border: 0;
 border-radius: 15px;
@@ -247,7 +247,7 @@ font-size: 2vh;
 }
 
 .inputStylemd{
-    size: 10;
+    width: 70%; 
     height: 2vh;
     border: 0;
     border-radius: 15px;
@@ -261,13 +261,14 @@ font-size: 2vh;
 }
 
 .inputStylesm{
-    size: 10;
+    width: 70%;
     height: 2vh;
     border: 0;
     border-radius: 15px;
     cursor: pointer;
     padding-left: 15px;
     font-size: 3vw;
+    
 }
 
 .inputStylesm:focus{
@@ -275,7 +276,7 @@ font-size: 2vh;
 }
 
 .inputStylexs{
-    size: 10;
+    width: 70%;
     height: 2vh;
     border: 0;
     border-radius: 15px;
@@ -287,8 +288,6 @@ font-size: 2vh;
 .inputStylexs:focus{
     outline: none;
 }
-
-
 
 .formStyle {
     width: 98%;
