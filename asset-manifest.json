@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/weather-forecast/static/css/main.2ae47eeb.chunk.css",
-    "main.js": "/weather-forecast/static/js/main.9c757989.chunk.js",
-    "main.js.map": "/weather-forecast/static/js/main.9c757989.chunk.js.map",
-    "runtime-main.js": "/weather-forecast/static/js/runtime-main.36abceb8.js",
-    "runtime-main.js.map": "/weather-forecast/static/js/runtime-main.36abceb8.js.map",
-    "static/js/2.25941cf3.chunk.js": "/weather-forecast/static/js/2.25941cf3.chunk.js",
-    "static/js/2.25941cf3.chunk.js.map": "/weather-forecast/static/js/2.25941cf3.chunk.js.map",
-    "static/js/3.38440014.chunk.js": "/weather-forecast/static/js/3.38440014.chunk.js",
-    "static/js/3.38440014.chunk.js.map": "/weather-forecast/static/js/3.38440014.chunk.js.map",
+    "main.css": "/weather-forecast/static/css/main.7e8c8f7b.chunk.css",
+    "main.js": "/weather-forecast/static/js/main.263d65f3.chunk.js",
+    "main.js.map": "/weather-forecast/static/js/main.263d65f3.chunk.js.map",
+    "runtime-main.js": "/weather-forecast/static/js/runtime-main.440459ba.js",
+    "runtime-main.js.map": "/weather-forecast/static/js/runtime-main.440459ba.js.map",
+    "static/js/2.2c3ce5ba.chunk.js": "/weather-forecast/static/js/2.2c3ce5ba.chunk.js",
+    "static/js/2.2c3ce5ba.chunk.js.map": "/weather-forecast/static/js/2.2c3ce5ba.chunk.js.map",
+    "static/js/3.3834281b.chunk.js": "/weather-forecast/static/js/3.3834281b.chunk.js",
+    "static/js/3.3834281b.chunk.js.map": "/weather-forecast/static/js/3.3834281b.chunk.js.map",
     "index.html": "/weather-forecast/index.html",
-    "static/css/main.2ae47eeb.chunk.css.map": "/weather-forecast/static/css/main.2ae47eeb.chunk.css.map",
-    "static/js/2.25941cf3.chunk.js.LICENSE.txt": "/weather-forecast/static/js/2.25941cf3.chunk.js.LICENSE.txt"
+    "static/css/main.7e8c8f7b.chunk.css.map": "/weather-forecast/static/css/main.7e8c8f7b.chunk.css.map",
+    "static/js/2.2c3ce5ba.chunk.js.LICENSE.txt": "/weather-forecast/static/js/2.2c3ce5ba.chunk.js.LICENSE.txt",
+    "static/media/rain.266ae8bf.png": "/weather-forecast/static/media/rain.266ae8bf.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.36abceb8.js",
-    "static/js/2.25941cf3.chunk.js",
-    "static/css/main.2ae47eeb.chunk.css",
-    "static/js/main.9c757989.chunk.js"
+    "static/js/runtime-main.440459ba.js",
+    "static/js/2.2c3ce5ba.chunk.js",
+    "static/css/main.7e8c8f7b.chunk.css",
+    "static/js/main.263d65f3.chunk.js"
   ]
 }
