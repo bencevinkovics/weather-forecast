@@ -1,13 +1,18 @@
 import { useState } from 'react';
+import LeftContainer from './components/LeftContainer';
 import RightContainer from './components/RightContainer';
 import axios from 'axios';
-import SearchBar from "./components/SearchBar";
-import BoxMain from "./components/BoxMain";
-import BoxDown from "./components/BoxDown";
+import SearchBar from './components/SearchBar'
+import './styles/App.css';
+import useBreakPoint from './hooks/useBreakPoints';
 
 function App() {
   const [weather, setWeather] = useState({});
   const [forecast, setForecast] = useState([]);
+
+
+  const screenSize = useBreakPoint();
+  const searchContainerClass = `searchContainer${screenSize}`;
 
   const getWeather = async (text) => {
     const ApiKey = process.env.REACT_APP_API_KEY
@@ -39,81 +44,23 @@ function App() {
   };
 
   return (
-    <div>
+    <div className='backgroundStyle'>
       {((typeof weather.main != "undefined") && (forecast.cod === "200")) ?
         (
-          <div style={mainStyle}>
-            <div style={leftContainerStyle}>
-              <SearchBar getWeather={getWeather} />
-              {(typeof weather.main != "undefined") ?
-                (<BoxMain weather={weather} />)
-                : (<div style={placeholderStyle}> Please type in a city</div>)}
-              {(typeof weather.main != "undefined") ?
-                (<BoxDown weather={weather} />)
-                : (<div style={placeholderStyle}></div>)}
-            </div>
-            <RightContainer forecast={forecast} />
+          <div className='mainStyle'>
+            <LeftContainer weather={weather} getWeather={getWeather} screenSize={screenSize} />
+            <RightContainer forecast={forecast} screenSize={screenSize} />
           </div >
         ) :
         (
-          <div style={blankStyle}>
-            <p style={{ fontSize: "45px", fontWeight: '700', color: '#FEFFED' }}>Hello, please search for your city.</p>
-            <SearchBar getWeather={getWeather} />
+          <div className='blankStyle'>
+            <p className='welcomeTextStyle'>Hello, please search for your city.</p>
+            <div className={searchContainerClass}><SearchBar getWeather={getWeather} /></div>
           </div>
-        )}
-    </div>
+        )
+      }
+    </div >
   )
-};
-
-const mainStyle = {
-  top: '0px',
-  bottom: '0px',
-  right: '0px',
-  left: '0px',
-  position: 'absolute',
-  background: 'linear-gradient( #419AF2, #4FA9F2, #5EB9F1, #6CC8F1)',
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'space-around',
-};
-
-const placeholderStyle = {
-  margin: 0,
-  padding: 0,
-  width: '100%',
-  height: '44%',
-  background: 'rgba(255, 255, 255, 0.8)',
-  borderRadius: '25px',
-  boxShadow: '5px 5px 10px 5px rgba(0,0,0,0.1)',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  flexDirection: 'row',
-};
-
-const leftContainerStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  width: '40%',
-  height: '90%',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-};
-
-const blankStyle = {
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
-  position: 'absolute',
-  background: 'linear-gradient( #419AF2, #4FA9F2, #5EB9F1, #6CC8F1)',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  flexDirection: 'column',
-  paddingLeft: '25%',
-  paddingRight: '25%',
 };
 
 export default App;

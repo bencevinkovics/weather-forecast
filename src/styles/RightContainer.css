@@ -1,0 +1,91 @@
+.rightContainerStylelg {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 40%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+.rightContainerStylemd {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+.rightContainerStylesm {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+/*BoxRight*/
+
+.boxRightStyle {
+    width: 98%;
+    height: 15vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dateStyle {
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 25px;
+    margin-right: 0,
+}
+
+.forecastDataStyle {
+    height: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.forecastInfoStyle {
+    padding: 0;
+    margin: 0;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.forecastTextStyle {
+    font-weight: 600;
+    font-size: 5vh;
+}
+
+.smallTextStylexs {
+    font-size: 1vh;
+}
+
+.imgStyle {
+    height: 90%;
+    width: auto;
+};
+
+/*MEDIA QUUERY 1024-től a jobb oldal miatt*/

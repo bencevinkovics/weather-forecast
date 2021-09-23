@@ -1,0 +1,285 @@
+.leftContainerStylelg {
+    /*padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;*/
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    max-height: 90%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid red;
+    margin:0;
+}
+
+.leftContainerStylemd {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid red;
+    margin:0;
+}
+
+.leftContainerStylesm {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid red;
+    margin:0;
+}
+
+
+.leftContainerStylexs {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid red;
+    margin:0;
+}
+
+/*BoxMain*/
+
+.boxMainLeftStyle {
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    width: 100%;
+    height: 44%;
+    display: flex;
+    flex-direction: row;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.1);
+}
+.boxLeftStyle{
+    display: flex;
+    flex-direction:row;
+}
+
+.infoStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    padding: 2vw;
+    /*padding-left: 20px; */
+}
+
+.smallTextStylelg {
+    font-size: 5vh; 
+}
+
+.largeTextStylelg {
+    font-size: 10vh;
+    font-weight: 500;
+    border: 1px solid green;
+}
+
+.smallTextStylemd {
+    font-size: 3.5vh; 
+}
+
+.largeTextStylemd {
+    font-size: 9vh;
+    font-weight: 500;
+}
+
+.smallTextStylesm {
+    font-weight: 500;
+    font-size: 5vw; 
+}
+
+.largeTextStylesm {
+    font-size: 8vh;
+    font-weight: 500;
+}
+
+.smallTextStylexs {
+    
+    font-weight: 500;
+    font-size: 5vw;
+}
+
+.largeTextStylexs {
+    font-size: 6vh;
+    font-weight: 500;
+}
+
+
+.iconStylelg {
+    max-width: 120%;
+    height: auto;
+}
+
+.iconStylemd {
+    max-width: 150%;
+    height: auto;
+}
+
+.iconStylesm {
+    max-width: 150%;
+    height: auto;
+}
+
+.iconStylexs {
+    max-width: 150%;
+    height: auto;
+}
+
+.frameStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    max-height: 100%;
+    border: 1px solid red;
+}
+
+
+/*BoxDown*/
+
+.boxDownLeftStylelg {
+    margin: 0;
+    margin-bottom: 2.5vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 44%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.1);
+    font-size: 3vh;
+}
+
+.boxDownLeftStylemd {
+    margin: 0;
+    margin-bottom: 2.5vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 44%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.1);
+    font-size: 3vh;
+}
+
+.boxDownLeftStylesm {
+    margin: 0;
+    margin-bottom: 2.5vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;    
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 44%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.1);
+    font-size: 3vh;
+}
+
+.boxDownLeftStylexs {
+    margin: 0;
+    margin-bottom: 2.5vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 44%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.1);
+    font-size: 3vh;
+}
+
+.rowStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-around;
+    padding-top: 0;
+    padding-left: 35px;
+    padding-bottom: 0;
+    padding-right: 35px;
+    margin: 0;
+}
+
+.hrStyle {
+    height: 1px;
+    width: 90%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: black;
+    opacity: 0.4;
+}
+
+/*Searchbar*/
+
+.inputStyle{
+size: 10;
+height: 2vh;
+border: 0;
+border-radius: 15px;
+cursor: pointer;
+padding-left: 15px;
+}
+
+.inputStyle:focus{
+    outline: none;
+}
+
+.formStyle {
+    width: 98%;
+    height: 4vh;
+    margin-top: 1vh;
+    background: rgba(255, 255, 255);
+    border: 0;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonStyle {
+    background: none;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    border: 1px solid #b0b0b0;
+    color: #b0b0b0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.buttonStyle:hover{
+    background: #b0b0b0 ;
+    color: white;
+}
+
+
+/*MEDIA QUERY <700 px a betuk miatt*/
