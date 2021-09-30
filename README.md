@@ -1,4 +1,4 @@
-Weather Forecast website, made in React. 
+Weather Forecast website, made in React.
 Uses the API of https://openweathermap.org
 Creator of the weather icons I used: https://www.iconfinder.com/Neolau1119
 
