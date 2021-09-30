@@ -1,6 +1,6 @@
-Weather Forecast website, made in React.
-Uses the API of https://openweathermap.org
-Creator of the weather icons I used: https://www.iconfinder.com/Neolau1119
+Weather Forecast website, made in React. <br/>
+Uses the API of https://openweathermap.org <br/>
+Creator of the weather icons I used: https://www.iconfinder.com/Neolau1119 <br/>
 
 Plans for improvement:
 - Adding responsive design ✔️
