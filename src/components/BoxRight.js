@@ -1,7 +1,7 @@
 import moment from "moment";
 import "../styles/RightContainer.css"
 
-const BoxRight = ({ key, date, temp, id, description, screenSize }) => {
+const BoxRight = ({ key, date, minTemp, maxTemp, id, description, screenSize }) => {
     let img = '';
     const day = moment(date).format('ddd');
     const dateFormed = moment(date).format('DD/MMM');
@@ -38,7 +38,7 @@ const BoxRight = ({ key, date, temp, id, description, screenSize }) => {
             </div>
             <div className='forecastDataStyle'>
                 <div className='forecastInfoStyle'>
-                    <div className='forecastTextStyle'> {Math.round(temp)}°C </div>
+                    <div className='forecastTextStyle'> {Math.round(minTemp)}°C/{Math.round(maxTemp)}°C </div>
                     <div className={smallForecastClass}> {description} </div>
                 </div>
                 <img className='imgStyle' src={`weatherIcons/${img}`} alt="Couldn't load." />
