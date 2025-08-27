@@ -1,10 +1,11 @@
-import moment from "moment";
 import "../styles/RightContainer.css"
+
+const { DateTime } = require("luxon")
 
 const BoxRight = ({ key, date, minTemp, maxTemp, id, description, screenSize }) => {
     let img = '';
-    const day = moment(date).format('ddd');
-    const dateFormed = moment(date).format('DD/MMM');
+    const day = DateTime.fromFormat(date, 'yyyy-MM-dd HH:mm:ss').toFormat('ccc');
+    const dateFormed = DateTime.fromFormat(date, 'yyyy-MM-dd HH:mm:ss').toFormat('dd/MMM');
     const smallForecastClass = `smallForecastStyle${screenSize}`;
 
     if (/801/.test(id)) {
@@ -15,7 +16,6 @@ const BoxRight = ({ key, date, minTemp, maxTemp, id, description, screenSize }) 
     }
     if (/800/.test(id)) {
         img = "clear_d.png"
-
     }
     if (/^7/.test(id)) {
         img = "fog.png"
@@ -41,7 +41,7 @@ const BoxRight = ({ key, date, minTemp, maxTemp, id, description, screenSize }) 
                     <div className='forecastTextStyle'> {Math.round(minTemp)}°C/{Math.round(maxTemp)}°C </div>
                     <div className={smallForecastClass}> {description} </div>
                 </div>
-                <img className='imgStyle' src={`weatherIcons/${img}`} alt="Couldn't load." />
+                <img className='imgStyle' src={`${process.env.PUBLIC_URL}/weatherIcons/${img}`} alt="Couldn't load." />
             </div>
 
         </div >
