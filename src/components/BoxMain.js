@@ -1,4 +1,3 @@
-import { findByLabelText } from "@testing-library/dom";
 import "../styles/LeftContainer.css"
 
 const { DateTime, Interval} = require("luxon");
