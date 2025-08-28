@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import LeftContainer from './components/LeftContainer';
 import RightContainer from './components/RightContainer';
 import axios from 'axios';
@@ -9,15 +9,44 @@ import useBreakPoint from './hooks/useBreakPoints';
 function App() {
   const [weather, setWeather] = useState({});
   const [forecast, setForecast] = useState([]);
-
+  const [lat, setLat] = useState(null);
+  const [lon, setLon] = useState(null);
+  const [permissionDenied, setPermissionDenied] = useState(false);
 
   const screenSize = useBreakPoint();
   const searchContainerClass = `searchContainer${screenSize}`;
 
-  const getWeather = async (text) => {
+  useEffect(() => {
+      navigator.geolocation.getCurrentPosition((position) => {
+        console.log(position);
+        setLat(position.coords.latitude);
+        setLon(position.coords.longitude);
+      }, (error) => {
+        console.log("Error getting location: ", error);
+        setPermissionDenied(true);
+      });
+  }, []);
+
+  useEffect(() => {
+  if (lat !== null && lon !== null) {
+    getWeather();
+  }
+}, [lat, lon]);
+
+  const getWeather = async (text = "") => {
+    
     const ApiKey = import.meta.env.VITE_API_KEY
-    const urlCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=${ApiKey}`;
-    const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${text}&units=metric&appid=${ApiKey}`;
+    let urlCurrent = "";
+    let urlForecast = "";
+    if((lat !== null) && (lon !== null)){
+      urlCurrent = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${ApiKey}`;
+      urlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${ApiKey}`;
+    }
+    else{
+      urlCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=${ApiKey}`;
+      urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${text}&units=metric&appid=${ApiKey}`;
+    }
+
     console.log(urlCurrent);
     console.log(urlForecast);
     await axios.get(urlCurrent)
@@ -53,11 +82,18 @@ function App() {
             <LeftContainer weather={weather} getWeather={getWeather} screenSize={screenSize} />
             <RightContainer forecast={forecast} screenSize={screenSize} />
           </div>
-        ) :
-        (
+        ) : (
           <div className='blankStyle'>
-            <p className='welcomeTextStyle'>Hello, please search for your city.</p>
-            <div className={searchContainerClass}><SearchBar getWeather={getWeather} screenSize={screenSize} /></div>
+            <p className='welcomeTextStyle'>
+              {permissionDenied ?
+              "Hello, please search for your city."
+              :
+              "Weather Data is Loading..."}
+            </p>
+            {permissionDenied && (
+              <div className={searchContainerClass}><SearchBar getWeather={getWeather} screenSize={screenSize} />
+              </div>
+            )}
           </div>
         )
       }
