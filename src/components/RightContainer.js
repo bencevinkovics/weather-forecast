@@ -1,15 +1,20 @@
 import BoxRight from "./BoxRight";
-import moment from "moment";
 import "../styles/RightContainer.css"
 
+import { DateTime } from "luxon";
+
+
+const todayPlus = (offsetDays) => {
+    return DateTime.now().plus({ days: offsetDays }).toFormat('yyyy-MM-dd');
+}
+
 const RightContainer = ({ forecast, screenSize }) => {
-    const today = (moment().format('YYYY-MM-DD'));
-    const todayPlusOne = (moment().add(1, 'd').format('YYYY-MM-DD'));
-    console.log(todayPlusOne);
-    const todayPlusTwo = (moment().add(2, 'd').format('YYYY-MM-DD'));
-    const todayPlusThree = (moment().add(3, 'd').format('YYYY-MM-DD'));
-    const todayPlusFour = (moment().add(4, 'd').format('YYYY-MM-DD'));
-    const todayPlusFive = (moment().add(5, 'd').format('YYYY-MM-DD'));
+    const today = DateTime.now().toFormat('yyyy-MM-dd');
+    const todayPlusOne = todayPlus(1);
+    const todayPlusTwo = todayPlus(2);
+    const todayPlusThree = todayPlus(3);
+    const todayPlusFour = todayPlus(4);
+    const todayPlusFive = todayPlus(5);
     const regexToday = new RegExp(today);
     const regexTodayPlusOne = new RegExp(todayPlusOne);
     const regexTodayPlusTwo = new RegExp(todayPlusTwo);
@@ -23,11 +28,11 @@ const RightContainer = ({ forecast, screenSize }) => {
     const f4 = [];
     const f5 = [];
 
-
     (forecast.list).map((forecast) => (
-
+        
         (regexTodayPlusOne.test(forecast.dt_txt)) ? (
             f1.push(forecast.main.temp)
+            
         ) :
             (regexTodayPlusTwo.test(forecast.dt_txt)) ? (
                 f2.push(forecast.main.temp)
@@ -42,12 +47,6 @@ const RightContainer = ({ forecast, screenSize }) => {
                             f5.push(forecast.main.temp)
                         ) : ('')
     ))
-
-    console.log(f1);
-
-
-
-
 
     return (
         <div className={rightContainerClass}>

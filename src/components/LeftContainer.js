@@ -22,6 +22,7 @@ const LeftContainer = ({ weather, getWeather, screenSize }) => {
             <BoxDown
                 sunrise={weather.sys.sunrise}
                 sunset={weather.sys.sunset}
+                timezone={weather.timezone}
                 feels={weather.main.feels_like}
                 wind={weather.wind.speed}
                 humidity={weather.main.humidity}

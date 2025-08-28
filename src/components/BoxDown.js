@@ -1,9 +1,11 @@
-import moment from "moment";
+
 import "../styles/LeftContainer.css";
 
-const BoxDown = ({ sunrise, sunset, feels, wind, humidity, screenSize }) => {
-    const sunriseTime = moment.unix(sunrise).format("HH:mm");
-    const sunsetTime = moment.unix(sunset).format("HH:mm");
+
+const { DateTime } = require("luxon");
+const BoxDown = ({ sunrise, sunset, timezone, feels, wind, humidity, screenSize }) => {
+    const sunriseTime = DateTime.fromSeconds(sunrise, { zone: 'UTC'}).plus({seconds: timezone}).toFormat('HH:mm');
+    const sunsetTime = DateTime.fromSeconds(sunset, { zone: 'UTC'}).plus({seconds: timezone}).toFormat('HH:mm');
     const boxDownLeftClass = `boxDownLeftStyle${screenSize}`;
 
 

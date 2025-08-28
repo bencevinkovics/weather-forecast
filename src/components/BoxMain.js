@@ -1,23 +1,26 @@
-import { findByLabelText } from "@testing-library/dom";
-import moment from "moment";
 import "../styles/LeftContainer.css"
+
+const { DateTime, Interval} = require("luxon");
 
 const BoxMain = ({ name, temp, description, id, sunrise, sunset, timezone, screenSize }) => {
     let img = "";
-    const timeDiff = parseInt(timezone / 3600)
+    const newSeconds = Math.floor(DateTime.now().toSeconds());
+    const currentTime = DateTime.fromSeconds(newSeconds, { zone: 'UTC'}).plus({seconds: timezone});
+    const sunriseTime = DateTime.fromSeconds(sunrise, { zone: 'UTC'}).plus({seconds: timezone});
+    const sunsetTime = DateTime.fromSeconds(sunset, { zone: 'UTC'}).plus({seconds: timezone});
     const iconClass = `iconStyle${screenSize}`;
     const smallMainTextClass = `smallMainTextStyle${screenSize}`;
     const largeMainTextClass = `largeMainTextStyle${screenSize}`;
 
     if (/801/.test(id)) {
-        (moment((moment.utc())).add((parseInt(timeDiff / 3600)), 'hours').isBetween(moment.unix(sunrise), moment.unix(sunset))) ?
+        (Interval.fromDateTimes(sunriseTime, sunsetTime).contains(currentTime)) ?
             (img = "few_clouds_d.png") : (img = "few_clouds_n.png")
     }
     if ((/802/.test(id)) || (/803/.test(id)) || (/804/.test(id))) {
         img = "clouds.png"
     }
     if (/800/.test(id)) {
-        (moment((moment.utc())).add((parseInt(timeDiff / 3600)), 'hours').isBetween(moment.unix(sunrise), moment.unix(sunset))) ?
+        (Interval.fromDateTimes(sunriseTime, sunsetTime).contains(currentTime)) ?
             (img = "clear_d.png") : (img = "clear_n.png")
 
     }
@@ -37,7 +40,7 @@ const BoxMain = ({ name, temp, description, id, sunrise, sunset, timezone, scree
     return (
         <div className='boxMainLeftStyle'>
             <div className='frameStyle'>
-                <img className={iconClass} src={`weatherIcons/${img}`} alt="Couldn't load." />
+                <img className={iconClass} src={`${process.env.PUBLIC_URL}/weatherIcons/${img}`} alt="Couldn't load." />
             </div>
             <div className='infoStyle'>
                 <div className={smallMainTextClass}>{name}</div>
