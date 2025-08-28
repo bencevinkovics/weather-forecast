@@ -1,8 +1,7 @@
 
 import "../styles/LeftContainer.css";
+import { DateTime } from "luxon";
 
-
-const { DateTime } = require("luxon");
 const BoxDown = ({ sunrise, sunset, timezone, feels, wind, humidity, screenSize }) => {
     const sunriseTime = DateTime.fromSeconds(sunrise, { zone: 'UTC'}).plus({seconds: timezone}).toFormat('HH:mm');
     const sunsetTime = DateTime.fromSeconds(sunset, { zone: 'UTC'}).plus({seconds: timezone}).toFormat('HH:mm');

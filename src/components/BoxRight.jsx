@@ -1,6 +1,6 @@
 import "../styles/RightContainer.css"
 
-const { DateTime } = require("luxon")
+import { DateTime } from "luxon";
 
 const BoxRight = ({ key, date, minTemp, maxTemp, id, description, screenSize }) => {
     let img = '';
@@ -41,7 +41,7 @@ const BoxRight = ({ key, date, minTemp, maxTemp, id, description, screenSize }) 
                     <div className='forecastTextStyle'> {Math.round(minTemp)}°C/{Math.round(maxTemp)}°C </div>
                     <div className={smallForecastClass}> {description} </div>
                 </div>
-                <img className='imgStyle' src={`${process.env.PUBLIC_URL}/weatherIcons/${img}`} alt="Couldn't load." />
+                <img className='imgStyle' src={`/weatherIcons/${img}`} alt="Couldn't load." />
             </div>
 
         </div >
