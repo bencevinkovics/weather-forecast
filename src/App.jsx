@@ -15,7 +15,7 @@ function App() {
   const searchContainerClass = `searchContainer${screenSize}`;
 
   const getWeather = async (text) => {
-    const ApiKey = process.env.REACT_APP_API_KEY
+    const ApiKey = import.meta.env.VITE_API_KEY
     const urlCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=${ApiKey}`;
     const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${text}&units=metric&appid=${ApiKey}`;
     console.log(urlCurrent);
