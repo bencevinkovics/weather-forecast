@@ -68,6 +68,8 @@ function App() {
           forecast
         )
       })
+      setLat(null);
+      setLon(null);
     return (
       forecast,
       weather
