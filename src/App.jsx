@@ -46,9 +46,6 @@ function App() {
       urlCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=${ApiKey}`;
       urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${text}&units=metric&appid=${ApiKey}`;
     }
-
-    console.log(urlCurrent);
-    console.log(urlForecast);
     await axios.get(urlCurrent)
       .then((response) => {
         setWeather(response.data);
