@@ -40,7 +40,7 @@ const BoxMain = ({ name, temp, description, id, sunrise, sunset, timezone, scree
     return (
         <div className='boxMainLeftStyle'>
             <div className='frameStyle'>
-                <img className={iconClass} src={`/weatherIcons/${img}`} alt="Couldn't load." />
+                <img className={iconClass} src={`./weatherIcons/${img}`} alt="Couldn't load." />
             </div>
             <div className='infoStyle'>
                 <div className={smallMainTextClass}>{name}</div>
